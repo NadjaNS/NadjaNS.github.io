@@ -1,0 +1,178 @@
+/*///////////////Mdia Queries///////////////// */
+
+@media screen and (min-width: 1171px) {
+  #home {
+    font-size: 2rem;
+    padding-left: 2rem;
+  }
+  #home h1 {
+    font-size: 4rem;
+  }
+  .nav-link {
+    font-size: 3rem;
+  }
+  .projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 1.5rem;
+  }
+}
+/* tablet */
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  #bg-img {
+    height: 100%;
+  }
+  #home {
+    height: 100vh;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  div.menu-image,
+  ul.menu-nav {
+    width: 100%;
+    min-height: 0;
+  }
+  .menu-nav {
+    height: 55vh;
+    font-size: 24px;
+    order: 1;
+  }
+  .menu-image {
+    height: 45vh;
+  }
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* ABOUT */
+  #about {
+    padding: 0;
+  }
+  .about-info {
+    grid-template-areas:
+      'image'
+      'bio'
+      'bio'
+      'learning1'
+      'learning2'
+      'learning3';
+
+    grid-template-columns: 1fr;
+  }
+  .learning {
+    text-align: start;
+  }
+  .learning h3 {
+    text-align: center;
+  }
+  .learning-3 {
+    display: none;
+  }
+  .gallery__item {
+    height: 10rem;
+  }
+  .bio {
+    text-align: start;
+
+    margin-left: 0rem;
+    padding: 0;
+  }
+  /* WORK */
+  .projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+  .footer-social li {
+    padding: 2rem;
+  }
+}
+/* mobile */
+@media screen and (max-width: 500px) {
+  main {
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  #bg-img {
+    height: 100%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  div.menu-image,
+  ul.menu-nav {
+    width: 100%;
+    min-height: 0;
+  }
+  .menu-nav {
+    height: 55vh;
+    font-size: 24px;
+    order: 1;
+  }
+  .menu-image {
+    height: 45vh;
+  }
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+  #home {
+    height: 100vh;
+    padding-top: 0rem;
+    font-size: 1rem;
+  }
+  #home h1 {
+    font-size: 2rem;
+    margin-top: 10vh;
+  }
+  /* about */
+
+  #bg-img {
+    background-position: center;
+  }
+  .about-info {
+    grid-template-areas:
+      'image'
+      'learning1'
+      'bio'
+      'bio'
+      'learning2'
+      'learning3';
+
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+  .learning {
+    text-align: start;
+  }
+  .learning h3 {
+    text-align: center;
+  }
+
+  .bio {
+    text-align: start;
+    margin-left: 0rem;
+    padding: 0;
+  }
+
+  .footer-social li {
+    padding: 1rem;
+  }
+  .footer-social i {
+    font-size: 2rem;
+  }
+}
