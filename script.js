@@ -26,3 +26,16 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+let btnBack = document.querySelector(`.menu-btn--back`);
+btnBack.addEventListener(`click`, backBtn);
+function backBtn() {
+  if ((showMenu = true)) {
+    menuBtn.classList.remove(`close`);
+    menu.classList.remove(`show`);
+    menuNav.classList.remove(`show`);
+    menuImg.classList.remove(`show`);
+    navItems.forEach((item) => item.classList.remove(`show`));
+    showMenu = false;
+  }
+}
