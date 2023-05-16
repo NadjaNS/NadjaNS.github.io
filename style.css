@@ -12,20 +12,13 @@
   --secondary-color: rgb(229, 203, 98);
 }
 body {
+  width: 100%;
   color: white;
   line-height: 1.5;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
 }
 .container {
   width: 100%;
-  background: var(--primary-color);
-  height: 100%;
-  position: relative;
 }
 
 #bg-img {
@@ -37,7 +30,7 @@ body {
     url(images/background.jpg);
 
   background-size: cover;
-  background-position: center;
+  background-position: top;
 }
 
 h1,
@@ -49,11 +42,11 @@ h3 {
 }
 
 .lg-heading {
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
 .sm-heading {
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   padding: 0.2rem 1rem;
 }
 .text-secondary {
@@ -61,7 +54,7 @@ h3 {
 }
 
 a {
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 header {
@@ -69,13 +62,13 @@ header {
   z-index: 2;
   width: 100%;
 }
-main {
-  padding: 4rem;
-}
 
 #home {
   height: 100vh;
   padding-top: 10rem;
+  font-size: 2rem;
+  padding-left: 2rem;
+  text-align: center;
 }
 
 .icons {
@@ -131,6 +124,7 @@ main {
   visibility: hidden;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 .menu.show {
@@ -145,7 +139,6 @@ main {
   justify-content: center;
   width: 50%;
   height: 100vh;
-  overflow: hidden;
 }
 
 .menu-nav {
@@ -188,7 +181,7 @@ main {
 }
 
 .nav-link {
-  font-size: 30px;
+  font-size: 3rem;
   font-weight: 300;
   font-family: inherit;
   color: white;
@@ -201,10 +194,10 @@ main {
 .nav-link:hover {
   color: var(--secondary-color);
 }
-/* second page */
+
 /* about me   */
 #about {
-  padding: 5rem 0 10rem 0;
+  padding: 0 2rem;
 }
 
 #about h2 {
@@ -229,6 +222,7 @@ main {
 
 .bio {
   grid-area: bio;
+  padding-right: 1rem;
 }
 .learning-1 {
   grid-area: learning1;
@@ -289,14 +283,14 @@ main {
 
 /* WORK */
 #work {
-  padding: 5rem 0 10rem 0;
+  padding: 5rem 2rem 10rem 2rem;
 }
 
 .projects {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-gap: 1.5rem;
 }
 figure {
@@ -374,3 +368,306 @@ footer {
     transform: translateX(0);
   }
 }
+
+.menu-btn--back {
+  border-radius: 30px;
+  border: 1px solid white;
+  font-size: 30px;
+  font-weight: 300;
+
+  color: white;
+  padding: 0.5rem 1.5rem;
+  background-color: transparent;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  cursor: pointer;
+}
+.menu-btn--back:hover {
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+/*///////////////Mdia Queries///////////////// */
+
+/* tablet */
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  .lg-heading {
+    font-size: 3rem;
+  }
+
+  main {
+    align-items: center;
+    text-align: center;
+  }
+  #bg-img {
+    height: 100%;
+  }
+  #home {
+    height: 100vh;
+    font-size: 1.5rem;
+  }
+
+  .nav-link {
+    font-size: 2rem;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+  }
+  .menu-image,
+  .menu-nav {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* ABOUT- tablet */
+  #about {
+    padding: 0;
+  }
+  .about-info {
+    grid-template-areas:
+      'image'
+      'bio'
+      'bio'
+      'learning1'
+      'learning2'
+      'learning3';
+
+    grid-template-columns: 1fr;
+    row-gap: 5rem;
+  }
+  .about-image {
+    padding-top: 10rem;
+  }
+  .learning {
+    text-align: start;
+  }
+  .learning h3 {
+    text-align: center;
+  }
+  .learning-3 {
+    display: none;
+  }
+  .gallery__item {
+    height: 10rem;
+  }
+  .bio {
+    text-align: start;
+    margin-left: 0rem;
+    padding: 0;
+  }
+  /* WORK - tablet*/
+  #work {
+    padding: 5rem 0;
+  }
+  .projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .footer-social li {
+    padding: 2rem;
+  }
+  .footer-social i {
+    font-size: 3rem;
+  }
+}
+/* MOBILE*/
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0;
+  }
+  main {
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  #bg-img {
+    height: 100%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+  div.menu-image,
+  ul.menu-nav {
+    width: 100%;
+  }
+  .menu-nav {
+    height: 55vh;
+    font-size: 24px;
+    order: 1;
+  }
+  .menu-image {
+    height: 45vh;
+  }
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+  .menu-btn--back {
+    display: none;
+  }
+  #home {
+    padding: 0rem;
+    padding-top: 12rem;
+    font-size: 1rem;
+  }
+  #home h1 {
+    font-size: 2rem;
+    margin-top: 10vh;
+  }
+  /* about-mobile */
+
+  #bg-img {
+    background-position: center;
+  }
+  .about-info {
+    grid-template-areas:
+      'image'
+      'learning1'
+      'bio'
+      'bio'
+      'learning2'
+      'learning3';
+
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+  .learning {
+    text-align: start;
+  }
+  .learning h3 {
+    text-align: center;
+  }
+
+  .bio {
+    text-align: start;
+    margin-left: 0rem;
+    padding: 0;
+  }
+  /* work-mobile */
+  .projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    gap: 3rem;
+  }
+
+  .footer-social li {
+    padding: 1rem;
+  }
+  .footer-social i {
+    font-size: 2rem;
+  }
+}
+/* Landscape */
+@media only screen and (max-width: 915px) and (orientation: landscape) {
+  .container {
+    padding: 0;
+  }
+  main {
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+  }
+  #bg-img {
+    height: 100%;
+  }
+  .menu {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+  div.menu-image,
+  ul.menu-nav {
+    width: 50%;
+  }
+  .menu-nav {
+    height: 100vh;
+  }
+
+  .nav-link {
+    font-size: 24px;
+  }
+  .image {
+    width: 150px;
+    height: 150px;
+  }
+  .menu-btn--back {
+    display: none;
+  }
+  #home {
+    padding: 0rem;
+    padding-top: 5rem;
+    font-size: 1rem;
+  }
+  #home h1 {
+    font-size: 2rem;
+    margin-top: 10vh;
+  }
+  /* about-land */
+
+  #bg-img {
+    background-position: center;
+  }
+  .about-info {
+    grid-template-areas:
+      'image'
+      'bio'
+      'bio'
+      'learning1'
+      'learning2'
+      'learning3';
+
+    grid-template-columns: 1fr;
+    row-gap: 3rem;
+  }
+  .learning {
+    text-align: start;
+  }
+  .learning h3 {
+    text-align: center;
+  }
+
+  .bio {
+    text-align: start;
+    margin-left: 0rem;
+    padding: 0;
+  }
+  .projects {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 3rem;
+  }
+
+  .footer-social li {
+    padding: 1rem;
+  }
+  .footer-social i {
+    font-size: 2rem;
+  }
+}
+
